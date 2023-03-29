@@ -19,10 +19,12 @@
 
 #    --set advertisedListeners="EXTERNAL://127.0.0.1:9092"
 
-#sh -x ./verify.sh
+#
 
 kubectl delete -f config/kompose/zookeeper.yaml,config/kompose/kafka.yaml
 kubectl apply -f config/kompose/zookeeper.yaml,config/kompose/kafka.yaml
+
+sh -x ./verify.sh
 
 #kubectl delete -f config/kompose/kafka-claim0-persistentvolumeclaim.yaml,config/kompose/kafka-deployment.yaml,config/kompose/kafka-service.yaml,config/kompose/kompose-default-networkpolicy.yaml,config/kompose/zookeeper-deployment.yaml
 

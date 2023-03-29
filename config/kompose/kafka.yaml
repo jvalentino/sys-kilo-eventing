@@ -42,11 +42,11 @@ spec:
             - name: KAFKA_ZOOKEEPER_CONNECT
               value: zookeeper-service:2181
             - name: KAFKA_LISTENERS
-              value: LISTENER_INTERNAL://kafka-service:9092,LISTENER_EXTERNAL://localhost:9093
+              value: LISTENER_INTERNAL://kafka-service:9092,LISTENER_EXTERNAL://localhost:9093,LISTENER_EXTERNAL_2://kafka-service:9094
             - name: KAFKA_ADVERTISED_LISTENERS
-              value: LISTENER_INTERNAL://kafka-service:9092,LISTENER_EXTERNAL://localhost:9093
+              value: LISTENER_INTERNAL://kafka-service:9092,LISTENER_EXTERNAL://localhost:9093,LISTENER_EXTERNAL_2://kafka-service:9094
             - name: KAFKA_LISTENER_SECURITY_PROTOCOL_MAP
-              value: LISTENER_INTERNAL:PLAINTEXT,LISTENER_EXTERNAL:PLAINTEXT
+              value: LISTENER_INTERNAL:PLAINTEXT,LISTENER_EXTERNAL:PLAINTEXT,LISTENER_EXTERNAL_2:PLAINTEXT
             - name: KAFKA_INTER_BROKER_LISTENER_NAME
               value: LISTENER_INTERNAL
           image: wurstmeister/kafka
